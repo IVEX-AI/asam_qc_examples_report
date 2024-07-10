@@ -1,4 +1,3 @@
-**/reports/
 .vscode
 *.pyc
 __pycache__
