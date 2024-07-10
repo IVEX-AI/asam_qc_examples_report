@@ -13,4 +13,3 @@ htmlcov
 coverage.xml
 .coverage*
 .python-version
-qc-*

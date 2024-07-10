@@ -1,0 +1,135 @@
+====================================================================================================
+QC4OpenX - Pooled results
+====================================================================================================
+
+
+====================================================================================================
+    CheckerBundle:  xodrBundle
+    Build date:     2024-06-05
+    Build version:  0.1.0
+    Description:    OpenDrive checker bundle
+    Summary:        
+
+
+    Checker:        semantic_xodr
+    Description:    Evaluates elements in the file and their semantics to guarantee they are in conformity with the standard.
+    Status:         completed
+    Summary:        
+        Error:      #0: Connecting road None shall be represented by at most one <connection> element per incoming road id.
+                    Connection with reused (incoming_road_id, connecting_road_id) = (300, None) pair.
+                       XPath: /OpenDRIVE/junction[2]/connection[1]
+                    Connection with reused (incoming_road_id, connecting_road_id) = (300, None) pair.
+                       XPath: /OpenDRIVE/junction[2]/connection[2]
+
+        Addressed Rules:        
+        - rule:         asam.net:xodr:1.7.0:road.lane.level_true_one_side
+        - rule:         asam.net:xodr:1.7.0:road.lane.access.no_mix_of_deny_or_allow
+        - rule:         asam.net:xodr:1.4.0:road.lane.link.lanes_across_lane_sections
+        - rule:         asam.net:xodr:1.4.0:road.linkage.is_junction_needed
+        - rule:         asam.net:xodr:1.7.0:road.lane.link.zero_width_at_start
+        - rule:         asam.net:xodr:1.7.0:road.lane.link.zero_width_at_end
+        - rule:         asam.net:xodr:1.4.0:road.lane.link.new_lane_appear
+        - rule:         asam.net:xodr:1.4.0:junctions.connection.connect_road_no_incoming_road
+        - rule:         asam.net:xodr:1.7.0:junctions.connection.one_connection_element
+        - rule:         asam.net:xodr:1.8.0:junctions.connection.one_link_to_incoming
+        - rule:         asam.net:xodr:1.7.0:junctions.connection.start_along_linkage
+
+    Checker:        geometry_xodr
+    Description:    Evaluates elements in the file and their geometrys to guarantee they are in conformity with the standard.
+    Status:         completed
+    Summary:        
+
+        Addressed Rules:        
+        - rule:         asam.net:xodr:1.7.0:road.geometry.param_poly3.length_match
+        - rule:         asam.net:xodr:1.4.0:road.lane.border.overlap_with_inner_lanes
+
+    Checker:        performance_xodr
+    Description:    Evaluates elements in the file to guarantee they are optimized.
+    Status:         completed
+    Summary:        
+        Warning:    #1: Redudant superelevation declaration.
+                    
+                       XPath: /OpenDRIVE/road[2]
+        Warning:    #2: Redudant lane width declaration.
+                    
+                       XPath: /OpenDRIVE/road[3]/lanes/laneSection[1]/right/lane[1]
+        Warning:    #3: Redudant superelevation declaration.
+                    
+                       XPath: /OpenDRIVE/road[5]
+        Warning:    #4: Redudant superelevation declaration.
+                    
+                       XPath: /OpenDRIVE/road[5]
+        Warning:    #5: Redudant superelevation declaration.
+                    
+                       XPath: /OpenDRIVE/road[5]
+        Warning:    #6: Redudant superelevation declaration.
+                    
+                       XPath: /OpenDRIVE/road[5]
+        Warning:    #7: Redudant superelevation declaration.
+                    
+                       XPath: /OpenDRIVE/road[5]
+        Warning:    #8: Redudant superelevation declaration.
+                    
+                       XPath: /OpenDRIVE/road[5]
+        Warning:    #9: Redudant superelevation declaration.
+                    
+                       XPath: /OpenDRIVE/road[5]
+        Warning:    #10: Redudant superelevation declaration.
+                    
+                       XPath: /OpenDRIVE/road[5]
+        Warning:    #11: Redudant superelevation declaration.
+                    
+                       XPath: /OpenDRIVE/road[5]
+        Warning:    #12: Redudant superelevation declaration.
+                    
+                       XPath: /OpenDRIVE/road[5]
+        Warning:    #13: Redudant superelevation declaration.
+                    
+                       XPath: /OpenDRIVE/road[6]
+        Warning:    #14: Redudant superelevation declaration.
+                    
+                       XPath: /OpenDRIVE/road[6]
+
+        Addressed Rules:        
+        - rule:         asam.net:xodr:1.7.0:performance.avoid_redundant_info
+====================================================================================================
+
+Addressed vs Violated rules report 
+
+
+Total number of addressed rules:   14
+	-> Addressed RuleUID: asam.net:xodr:1.4.0:junctions.connection.connect_road_no_incoming_road
+
+	-> Addressed RuleUID: asam.net:xodr:1.4.0:road.lane.border.overlap_with_inner_lanes
+
+	-> Addressed RuleUID: asam.net:xodr:1.4.0:road.lane.link.lanes_across_lane_sections
+
+	-> Addressed RuleUID: asam.net:xodr:1.4.0:road.lane.link.new_lane_appear
+
+	-> Addressed RuleUID: asam.net:xodr:1.4.0:road.linkage.is_junction_needed
+
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:junctions.connection.one_connection_element
+
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:junctions.connection.start_along_linkage
+
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:performance.avoid_redundant_info
+
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.geometry.param_poly3.length_match
+
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.lane.access.no_mix_of_deny_or_allow
+
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.lane.level_true_one_side
+
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.lane.link.zero_width_at_end
+
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.lane.link.zero_width_at_start
+
+	-> Addressed RuleUID: asam.net:xodr:1.8.0:junctions.connection.one_link_to_incoming
+
+Total number of violated rules:    2
+	-> Violated RuleUID: asam.net:xodr:1.7.0:performance.avoid_redundant_info
+
+	-> Violated RuleUID: asam.net:xodr:1.8.0:junctions.connection.one_link_to_incoming
+
+====================================================================================================
+

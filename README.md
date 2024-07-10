@@ -1,43 +1,20 @@
 # ASAM QC Checker - Examples report generator
 
-This repository contains a simple set of scripts to generate reports from
-standard example files using one of the ASAM Standard Quality Checkers.
+This repository contains a simple entry point for the ASAM Standard Quality
+Checkers [demo pipeline](https://github.com/asam-ev/qc-framework/tree/develop/demo_pipeline).
 
 ## Usage
 
-This section describes the steps to use one of the python checkers with the
-scripts in this repository. It uses the [OpenDrive checker](https://github.com/asam-ev/qc-opendrive)
-as example.
-
-1. Install python dependencies
+This section describe the usage of the entry point using the
+[OpenDrive examples](https://publications.pages.asam.net/standards/ASAM_OpenDRIVE/ASAM_OpenDRIVE_Specification/latest/specification/_attachments/generated/ASAM_OpenDRIVE_1-8-0_examples_and_use-cases.zip).
 
 ```
-pip install -r requirements.txt
+./run_demo_pipeline.sh \
+    /home/user/Downloads/ASAM_OpenDRIVE_1-8-0_examples_and_use-cases \
+    $(pwd)/reports/open_drive \
+    xodr
 ```
 
-2. Prepare target checker to this folder
-
-```
-git clone https://github.com/asam-ev/qc-opendrive.git
-cd qc-opendrive
-git checkout develop
-pip install -r requirements.txt
-cd ..
-```
-
-3. Run the script to create the configs automatically
-
-```
-python create_configs.py \
-  -i /home/user/Downloads/ASAM_OpenDRIVE_1-8-0_examples_and_use-cases \
-  -e xodr \
-  -b xodrBundle \
-  -o configs/open_drive \
-  -r reports/open_drive
-```
-
-4. Execute the checker with the configs
-
-```
-./run.sh qc-opendrive $(pwd)/configs/open_drive
-```
+This will execute the latest demo pipeline docker image for each file in the
+given input path and will produce the output that can be found on the
+[reports/open_drive](./reports/open_drive/).
