@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<Config>
-  <Param name="XodrFile" value="/home/tripel/Documents/asam_odr_checker/ASAM_OpenDRIVE_1-8-0_examples_and_use-cases/examples/Ex_CrossSectionSurface/Ex_Camber_Straight_Profile.xodr"/>
-  <CheckerBundle application="xodrBundle">
-    <Param name="resultFile" value="/home/tripel/ivex/asam_qc_examples_report/reports/open_drive/Ex_Camber_Straight_Profile_report.xqar"/>
-  </CheckerBundle>
-</Config>

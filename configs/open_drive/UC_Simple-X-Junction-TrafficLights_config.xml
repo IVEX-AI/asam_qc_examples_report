@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<Config>
-  <Param name="XodrFile" value="/home/tripel/Documents/asam_odr_checker/ASAM_OpenDRIVE_1-8-0_examples_and_use-cases/use_cases/UC_Simple-X-Junction-TrafficLights/UC_Simple-X-Junction-TrafficLights.xodr"/>
-  <CheckerBundle application="xodrBundle">
-    <Param name="resultFile" value="/home/tripel/ivex/asam_qc_examples_report/reports/open_drive/UC_Simple-X-Junction-TrafficLights_report.xqar"/>
-  </CheckerBundle>
-</Config>

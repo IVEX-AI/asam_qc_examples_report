@@ -22,6 +22,9 @@ def args_entrypoint() -> argparse.Namespace:
 
 def main():
     args = args_entrypoint()
+
+    os.makedirs(args.config_output, exist_ok=True)
+
     for xodr_file_path in glob.glob(
         os.path.join(args.input_path, f"**/*.{args.file_extension}"), recursive=True
     ):
