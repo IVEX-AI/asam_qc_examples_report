@@ -21,13 +21,13 @@ if [[ -z "$INPUT_PATH" ]]; then
     echo "proper usage: ./run_demo_pipeline.sh INPUT_PATH OUTPUT_PATH FILE_EXTENSION"
     exit 1
 fi
-cd "${INPUT_PATH}"
 
-find . -type f  -name "*${FILE_EXTENSION}" \
-    -exec docker run \
-    -e INPUT_FILENAME={} \
-    -v "${INPUT_PATH}":/input_directory \
+export OUTPUT_PATH="${OUTPUT_PATH}"
+find "${INPUT_PATH}" -type f  -name "*${FILE_EXTENSION}" \
+    -exec  bash -c 'docker run \
+    -e INPUT_FILENAME="$(basename {})" \
+    -v "$(dirname {})":/input_directory \
     -v "${OUTPUT_PATH}":/out \
     -e USER_ID=$(id -u) \
     -e GROUP_ID=$(id -g) \
-    --rm --name demo_pipeline ghcr.io/asam-ev/qc-framework:demo-pipeline-latest \;
+    --rm --name demo_pipeline ghcr.io/asam-ev/qc-framework:demo-pipeline-latest' \;
