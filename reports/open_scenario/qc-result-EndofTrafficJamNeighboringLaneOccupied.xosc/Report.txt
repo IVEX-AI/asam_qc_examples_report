@@ -1,0 +1,81 @@
+====================================================================================================
+QC4OpenX - Pooled results
+====================================================================================================
+
+
+====================================================================================================
+    CheckerBundle:  xoscBundle
+    Build date:     2024-07-11
+    Build version:  0.1.0
+    Description:    OpenScenario checker bundle
+    Summary:        
+
+
+    Checker:        basic_xosc
+    Description:    Check if basic properties of input file are properly set
+    Status:         completed
+    Summary:        
+
+        Addressed Rules:        
+        - rule:         asam.net:xosc:1.0.0:xml.valid_xml_document
+
+    Checker:        schema_xosc
+    Description:    Check if xml properties of input file are properly set
+    Status:         completed
+    Summary:        
+
+        Addressed Rules:        
+        - rule:         asam.net:xosc:1.0.0:xml.valid_schema
+
+    Checker:        reference_xosc
+    Description:    Check if xml properties of input file are properly set
+    Status:         completed
+    Summary:        
+        Error:      #0: Issue flagging when an entity is referred in a entityRef attribute but it is not declared among Entities
+                    Entity at /OpenSCENARIO/Storyboard/Story/Act/ManeuverGroup/Maneuver/Event/StartTrigger/ConditionGroup/Condition/ByEntityCondition/TriggeringEntities/EntityRef with id name_in_global_scope not found among defined Entities 
+                       XPath: /OpenSCENARIO/Storyboard/Story/Act/ManeuverGroup/Maneuver/Event/StartTrigger/ConditionGroup/Condition/ByEntityCondition/TriggeringEntities/EntityRef
+
+        Addressed Rules:        
+        - rule:         asam.net:xosc:1.2.0:reference_control.uniquely_resolvable_entity_references
+        - rule:         asam.net:xosc:1.2.0:reference_control.resolvable_signal_id_in_traffic_signal_state_action
+        - rule:         asam.net:xosc:1.2.0:reference_control.resolvable_traffic_signal_controller_by_traffic_signal_controller_ref
+        - rule:         asam.net:xosc:1.2.0:reference_control.valid_actor_reference_in_private_actions
+        - rule:         asam.net:xosc:1.2.0:reference_control.resolvable_entity_references
+        - rule:         asam.net:xosc:1.2.0:reference_control.resolvable_variable_reference
+
+    Checker:        parameters_xosc
+    Description:    Check if parameters properties of input file are properly set
+    Status:         completed
+    Summary:        
+
+        Addressed Rules:        
+        - rule:         asam.net:xosc:1.2.0:parameters.valid_parameter_declaration_in_catalogs
+====================================================================================================
+
+Addressed vs Violated rules report 
+
+
+Total number of addressed rules:   9
+	-> Addressed RuleUID: asam.net:xosc:1.0.0:xml.valid_schema
+
+	-> Addressed RuleUID: asam.net:xosc:1.0.0:xml.valid_xml_document
+
+	-> Addressed RuleUID: asam.net:xosc:1.2.0:parameters.valid_parameter_declaration_in_catalogs
+
+	-> Addressed RuleUID: asam.net:xosc:1.2.0:reference_control.resolvable_entity_references
+
+	-> Addressed RuleUID: asam.net:xosc:1.2.0:reference_control.resolvable_signal_id_in_traffic_signal_state_action
+
+	-> Addressed RuleUID: asam.net:xosc:1.2.0:reference_control.resolvable_traffic_signal_controller_by_traffic_signal_controller_ref
+
+	-> Addressed RuleUID: asam.net:xosc:1.2.0:reference_control.resolvable_variable_reference
+
+	-> Addressed RuleUID: asam.net:xosc:1.2.0:reference_control.uniquely_resolvable_entity_references
+
+	-> Addressed RuleUID: asam.net:xosc:1.2.0:reference_control.valid_actor_reference_in_private_actions
+
+Total number of violated rules:    1
+	-> Violated RuleUID: asam.net:xosc:1.2.0:reference_control.resolvable_entity_references
+
+====================================================================================================
+
