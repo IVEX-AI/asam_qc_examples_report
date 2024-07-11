@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<CheckerResults version="1.0.0">
+
+  <CheckerBundle build_date="2024-07-11" description="OpenScenario checker bundle" name="xoscBundle" summary="" version="0.1.0">
+    <Checker checkerId="basic_xosc" description="Check if basic properties of input file are properly set" status="completed" summary="">
+      <AddressedRule ruleUID="asam.net:xosc:1.0.0:xml.valid_xml_document"/>
+    </Checker>
+    <Checker checkerId="schema_xosc" description="Check if xml properties of input file are properly set" status="completed" summary="">
+      <Issue description="Issue flagging when input file does not follow its version schema" issueId="0" level="1" ruleUID="asam.net:xosc:1.0.0:xml.valid_schema">
+        <Locations description="Element 'TrafficSignalController': This element is not expected. Expected is one of ( VariableDeclarations, MonitorDeclarations, CatalogLocations ).">
+          <FileLocation column="0" row="5"/>
+        </Locations>
+      </Issue>
+      <AddressedRule ruleUID="asam.net:xosc:1.0.0:xml.valid_schema"/>
+    </Checker>
+    <Checker checkerId="reference_xosc" description="Check if xml properties of input file are properly set" status="completed" summary="">
+      <AddressedRule ruleUID="asam.net:xosc:1.2.0:reference_control.uniquely_resolvable_entity_references"/>
+      <AddressedRule ruleUID="asam.net:xosc:1.2.0:reference_control.resolvable_signal_id_in_traffic_signal_state_action"/>
+      <AddressedRule ruleUID="asam.net:xosc:1.2.0:reference_control.resolvable_traffic_signal_controller_by_traffic_signal_controller_ref"/>
+      <AddressedRule ruleUID="asam.net:xosc:1.2.0:reference_control.valid_actor_reference_in_private_actions"/>
+      <AddressedRule ruleUID="asam.net:xosc:1.2.0:reference_control.resolvable_entity_references"/>
+      <AddressedRule ruleUID="asam.net:xosc:1.2.0:reference_control.resolvable_variable_reference"/>
+    </Checker>
+    <Checker checkerId="parameters_xosc" description="Check if parameters properties of input file are properly set" status="completed" summary="">
+      <AddressedRule ruleUID="asam.net:xosc:1.2.0:parameters.valid_parameter_declaration_in_catalogs"/>
+    </Checker>
+  </CheckerBundle>
+
+</CheckerResults>
