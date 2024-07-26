@@ -13,10 +13,48 @@
       <AddressedRule ruleUID="asam.net:xodr:1.7.0:junctions.connection.one_connection_element"/>
       <AddressedRule ruleUID="asam.net:xodr:1.8.0:junctions.connection.one_link_to_incoming"/>
       <AddressedRule ruleUID="asam.net:xodr:1.7.0:junctions.connection.start_along_linkage"/>
+      <AddressedRule ruleUID="asam.net:xodr:1.7.0:junctions.connection.end_opposite_linkage"/>
     </Checker>
     <Checker status="completed" checkerId="geometry_xodr" description="Evaluates elements in the file and their geometrys to guarantee they are in conformity with the standard." summary="">
       <AddressedRule ruleUID="asam.net:xodr:1.7.0:road.geometry.param_poly3.length_match"/>
       <AddressedRule ruleUID="asam.net:xodr:1.4.0:road.lane.border.overlap_with_inner_lanes"/>
+      <AddressedRule ruleUID="asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range"/>
+      <AddressedRule ruleUID="asam.net:xodr:1.7.0:road.geometry.parampoly3.normalized_range"/>
+      <Issue issueId="0" description="Length does not match the actual curve length. The estimated absolute error from numerical integration is 8.384754729413153e-14" level="1" ruleUID="asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range">
+        <Locations description="">
+          <XMLLocation xpath="/OpenDRIVE/road[1]/planView/geometry[3]"/>
+        </Locations>
+      </Issue>
+      <Issue issueId="1" description="Length does not match the actual curve length. The estimated absolute error from numerical integration is 1.2717269651066902e-13" level="1" ruleUID="asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range">
+        <Locations description="">
+          <XMLLocation xpath="/OpenDRIVE/road[1]/planView/geometry[4]"/>
+        </Locations>
+      </Issue>
+      <Issue issueId="2" description="Length does not match the actual curve length. The estimated absolute error from numerical integration is 2.7692084991843207e-13" level="1" ruleUID="asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range">
+        <Locations description="">
+          <XMLLocation xpath="/OpenDRIVE/road[1]/planView/geometry[6]"/>
+        </Locations>
+      </Issue>
+      <Issue issueId="3" description="Length does not match the actual curve length. The estimated absolute error from numerical integration is 6.91030915386251e-12" level="1" ruleUID="asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range">
+        <Locations description="">
+          <XMLLocation xpath="/OpenDRIVE/road[5]/planView/geometry"/>
+        </Locations>
+      </Issue>
+      <Issue issueId="4" description="Length does not match the actual curve length. The estimated absolute error from numerical integration is 1.827725087029273e-13" level="1" ruleUID="asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range">
+        <Locations description="">
+          <XMLLocation xpath="/OpenDRIVE/road[7]/planView/geometry"/>
+        </Locations>
+      </Issue>
+      <Issue issueId="5" description="Length does not match the actual curve length. The estimated absolute error from numerical integration is 4.947738358843357e-12" level="1" ruleUID="asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range">
+        <Locations description="">
+          <XMLLocation xpath="/OpenDRIVE/road[8]/planView/geometry"/>
+        </Locations>
+      </Issue>
+      <Issue issueId="6" description="Length does not match the actual curve length. The estimated absolute error from numerical integration is 1.6752446888336238e-13" level="1" ruleUID="asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range">
+        <Locations description="">
+          <XMLLocation xpath="/OpenDRIVE/road[9]/planView/geometry"/>
+        </Locations>
+      </Issue>
     </Checker>
     <Checker status="completed" checkerId="performance_xodr" description="Evaluates elements in the file to guarantee they are optimized." summary="">
       <AddressedRule ruleUID="asam.net:xodr:1.7.0:performance.avoid_redundant_info"/>

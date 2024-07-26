@@ -28,15 +28,39 @@ QC4OpenX - Pooled results
         - rule:         asam.net:xodr:1.7.0:junctions.connection.one_connection_element
         - rule:         asam.net:xodr:1.8.0:junctions.connection.one_link_to_incoming
         - rule:         asam.net:xodr:1.7.0:junctions.connection.start_along_linkage
+        - rule:         asam.net:xodr:1.7.0:junctions.connection.end_opposite_linkage
 
     Checker:        geometry_xodr
     Description:    Evaluates elements in the file and their geometrys to guarantee they are in conformity with the standard.
     Status:         completed
     Summary:        
+        Error:      #0: Length does not match the actual curve length. The estimated absolute error from numerical integration is 8.384754729413153e-14
+                    
+                       XPath: /OpenDRIVE/road[1]/planView/geometry[3]
+        Error:      #1: Length does not match the actual curve length. The estimated absolute error from numerical integration is 1.2717269651066902e-13
+                    
+                       XPath: /OpenDRIVE/road[1]/planView/geometry[4]
+        Error:      #2: Length does not match the actual curve length. The estimated absolute error from numerical integration is 2.7692084991843207e-13
+                    
+                       XPath: /OpenDRIVE/road[1]/planView/geometry[6]
+        Error:      #3: Length does not match the actual curve length. The estimated absolute error from numerical integration is 6.91030915386251e-12
+                    
+                       XPath: /OpenDRIVE/road[5]/planView/geometry
+        Error:      #4: Length does not match the actual curve length. The estimated absolute error from numerical integration is 1.827725087029273e-13
+                    
+                       XPath: /OpenDRIVE/road[7]/planView/geometry
+        Error:      #5: Length does not match the actual curve length. The estimated absolute error from numerical integration is 4.947738358843357e-12
+                    
+                       XPath: /OpenDRIVE/road[8]/planView/geometry
+        Error:      #6: Length does not match the actual curve length. The estimated absolute error from numerical integration is 1.6752446888336238e-13
+                    
+                       XPath: /OpenDRIVE/road[9]/planView/geometry
 
         Addressed Rules:        
         - rule:         asam.net:xodr:1.7.0:road.geometry.param_poly3.length_match
         - rule:         asam.net:xodr:1.4.0:road.lane.border.overlap_with_inner_lanes
+        - rule:         asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range
+        - rule:         asam.net:xodr:1.7.0:road.geometry.parampoly3.normalized_range
 
     Checker:        performance_xodr
     Description:    Evaluates elements in the file to guarantee they are optimized.
@@ -50,7 +74,7 @@ QC4OpenX - Pooled results
 Addressed vs Violated rules report 
 
 
-Total number of addressed rules:   14
+Total number of addressed rules:   17
 	-> Addressed RuleUID: asam.net:xodr:1.4.0:junctions.connection.connect_road_no_incoming_road
 
 	-> Addressed RuleUID: asam.net:xodr:1.4.0:road.lane.border.overlap_with_inner_lanes
@@ -61,6 +85,8 @@ Total number of addressed rules:   14
 
 	-> Addressed RuleUID: asam.net:xodr:1.4.0:road.linkage.is_junction_needed
 
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:junctions.connection.end_opposite_linkage
+
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:junctions.connection.one_connection_element
 
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:junctions.connection.start_along_linkage
@@ -68,6 +94,10 @@ Total number of addressed rules:   14
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:performance.avoid_redundant_info
 
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.geometry.param_poly3.length_match
+
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range
+
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.geometry.parampoly3.normalized_range
 
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.lane.access.no_mix_of_deny_or_allow
 
@@ -79,6 +109,8 @@ Total number of addressed rules:   14
 
 	-> Addressed RuleUID: asam.net:xodr:1.8.0:junctions.connection.one_link_to_incoming
 
-Total number of violated rules:    0
+Total number of violated rules:    1
+	-> Violated RuleUID: asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range
+
 ====================================================================================================
 

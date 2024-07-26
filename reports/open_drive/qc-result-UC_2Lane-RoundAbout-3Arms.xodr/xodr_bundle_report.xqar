@@ -13,6 +13,7 @@
       <AddressedRule ruleUID="asam.net:xodr:1.7.0:junctions.connection.one_connection_element"/>
       <AddressedRule ruleUID="asam.net:xodr:1.8.0:junctions.connection.one_link_to_incoming"/>
       <AddressedRule ruleUID="asam.net:xodr:1.7.0:junctions.connection.start_along_linkage"/>
+      <AddressedRule ruleUID="asam.net:xodr:1.7.0:junctions.connection.end_opposite_linkage"/>
       <Issue issueId="0" description="A connecting road shall only have the &lt;laneLink&gt; element for that direction." level="1" ruleUID="asam.net:xodr:1.8.0:junctions.connection.one_link_to_incoming">
         <Locations description="Lane link in opposite direction.">
           <XMLLocation xpath="/OpenDRIVE/junction[1]/connection[3]/laneLink[1]"/>
@@ -32,6 +33,8 @@
     <Checker status="completed" checkerId="geometry_xodr" description="Evaluates elements in the file and their geometrys to guarantee they are in conformity with the standard." summary="">
       <AddressedRule ruleUID="asam.net:xodr:1.7.0:road.geometry.param_poly3.length_match"/>
       <AddressedRule ruleUID="asam.net:xodr:1.4.0:road.lane.border.overlap_with_inner_lanes"/>
+      <AddressedRule ruleUID="asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range"/>
+      <AddressedRule ruleUID="asam.net:xodr:1.7.0:road.geometry.parampoly3.normalized_range"/>
     </Checker>
     <Checker status="completed" checkerId="performance_xodr" description="Evaluates elements in the file to guarantee they are optimized." summary="">
       <AddressedRule ruleUID="asam.net:xodr:1.7.0:performance.avoid_redundant_info"/>
@@ -110,7 +113,7 @@
           <XMLLocation xpath="/OpenDRIVE/road[10]/lanes/laneSection[2]/right/lane[3]"/>
         </Locations>
       </Issue>
-      <Issue issueId="18" description="Redudant superelevation declaration." level="2" ruleUID="asam.net:xodr:1.7.0:performance.avoid_redundant_info">
+      <Issue issueId="18" description="Redudant elevation declaration." level="2" ruleUID="asam.net:xodr:1.7.0:performance.avoid_redundant_info">
         <Locations description="">
           <XMLLocation xpath="/OpenDRIVE/road[11]"/>
         </Locations>
@@ -125,7 +128,7 @@
           <XMLLocation xpath="/OpenDRIVE/road[12]/lanes/laneSection/right/lane[4]"/>
         </Locations>
       </Issue>
-      <Issue issueId="21" description="Redudant superelevation declaration." level="2" ruleUID="asam.net:xodr:1.7.0:performance.avoid_redundant_info">
+      <Issue issueId="21" description="Redudant elevation declaration." level="2" ruleUID="asam.net:xodr:1.7.0:performance.avoid_redundant_info">
         <Locations description="">
           <XMLLocation xpath="/OpenDRIVE/road[13]"/>
         </Locations>
@@ -135,7 +138,7 @@
           <XMLLocation xpath="/OpenDRIVE/road[13]"/>
         </Locations>
       </Issue>
-      <Issue issueId="23" description="Redudant superelevation declaration." level="2" ruleUID="asam.net:xodr:1.7.0:performance.avoid_redundant_info">
+      <Issue issueId="23" description="Redudant elevation declaration." level="2" ruleUID="asam.net:xodr:1.7.0:performance.avoid_redundant_info">
         <Locations description="">
           <XMLLocation xpath="/OpenDRIVE/road[14]"/>
         </Locations>
@@ -145,7 +148,7 @@
           <XMLLocation xpath="/OpenDRIVE/road[14]"/>
         </Locations>
       </Issue>
-      <Issue issueId="25" description="Redudant superelevation declaration." level="2" ruleUID="asam.net:xodr:1.7.0:performance.avoid_redundant_info">
+      <Issue issueId="25" description="Redudant elevation declaration." level="2" ruleUID="asam.net:xodr:1.7.0:performance.avoid_redundant_info">
         <Locations description="">
           <XMLLocation xpath="/OpenDRIVE/road[15]"/>
         </Locations>

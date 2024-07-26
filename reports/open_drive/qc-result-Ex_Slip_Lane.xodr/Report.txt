@@ -15,26 +15,6 @@ QC4OpenX - Pooled results
     Description:    Evaluates elements in the file and their semantics to guarantee they are in conformity with the standard.
     Status:         completed
     Summary:        
-        Error:      #0: Connecting road None shall be represented by at most one <connection> element per incoming road id.
-                    Connection with reused (incoming_road_id, connecting_road_id) = (65, None) pair.
-                       XPath: /OpenDRIVE/junction[1]/connection[1]
-                    Connection with reused (incoming_road_id, connecting_road_id) = (65, None) pair.
-                       XPath: /OpenDRIVE/junction[1]/connection[2]
-        Error:      #1: Connecting road None shall be represented by at most one <connection> element per incoming road id.
-                    Connection with reused (incoming_road_id, connecting_road_id) = (66, None) pair.
-                       XPath: /OpenDRIVE/junction[3]/connection[1]
-                    Connection with reused (incoming_road_id, connecting_road_id) = (66, None) pair.
-                       XPath: /OpenDRIVE/junction[3]/connection[2]
-        Error:      #2: Connecting road None shall be represented by at most one <connection> element per incoming road id.
-                    Connection with reused (incoming_road_id, connecting_road_id) = (80, None) pair.
-                       XPath: /OpenDRIVE/junction[4]/connection[3]
-                    Connection with reused (incoming_road_id, connecting_road_id) = (80, None) pair.
-                       XPath: /OpenDRIVE/junction[4]/connection[4]
-        Error:      #3: Connecting road None shall be represented by at most one <connection> element per incoming road id.
-                    Connection with reused (incoming_road_id, connecting_road_id) = (86, None) pair.
-                       XPath: /OpenDRIVE/junction[5]/connection[3]
-                    Connection with reused (incoming_road_id, connecting_road_id) = (86, None) pair.
-                       XPath: /OpenDRIVE/junction[5]/connection[4]
 
         Addressed Rules:        
         - rule:         asam.net:xodr:1.7.0:road.lane.level_true_one_side
@@ -48,6 +28,7 @@ QC4OpenX - Pooled results
         - rule:         asam.net:xodr:1.7.0:junctions.connection.one_connection_element
         - rule:         asam.net:xodr:1.8.0:junctions.connection.one_link_to_incoming
         - rule:         asam.net:xodr:1.7.0:junctions.connection.start_along_linkage
+        - rule:         asam.net:xodr:1.7.0:junctions.connection.end_opposite_linkage
 
     Checker:        geometry_xodr
     Description:    Evaluates elements in the file and their geometrys to guarantee they are in conformity with the standard.
@@ -57,15 +38,17 @@ QC4OpenX - Pooled results
         Addressed Rules:        
         - rule:         asam.net:xodr:1.7.0:road.geometry.param_poly3.length_match
         - rule:         asam.net:xodr:1.4.0:road.lane.border.overlap_with_inner_lanes
+        - rule:         asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range
+        - rule:         asam.net:xodr:1.7.0:road.geometry.parampoly3.normalized_range
 
     Checker:        performance_xodr
     Description:    Evaluates elements in the file to guarantee they are optimized.
     Status:         completed
     Summary:        
-        Warning:    #4: Redudant superelevation declaration.
+        Warning:    #0: Redudant elevation declaration.
                     
                        XPath: /OpenDRIVE/road[4]
-        Warning:    #5: Redudant superelevation declaration.
+        Warning:    #1: Redudant elevation declaration.
                     
                        XPath: /OpenDRIVE/road[8]
 
@@ -76,7 +59,7 @@ QC4OpenX - Pooled results
 Addressed vs Violated rules report 
 
 
-Total number of addressed rules:   14
+Total number of addressed rules:   17
 	-> Addressed RuleUID: asam.net:xodr:1.4.0:junctions.connection.connect_road_no_incoming_road
 
 	-> Addressed RuleUID: asam.net:xodr:1.4.0:road.lane.border.overlap_with_inner_lanes
@@ -87,6 +70,8 @@ Total number of addressed rules:   14
 
 	-> Addressed RuleUID: asam.net:xodr:1.4.0:road.linkage.is_junction_needed
 
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:junctions.connection.end_opposite_linkage
+
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:junctions.connection.one_connection_element
 
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:junctions.connection.start_along_linkage
@@ -94,6 +79,10 @@ Total number of addressed rules:   14
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:performance.avoid_redundant_info
 
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.geometry.param_poly3.length_match
+
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range
+
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.geometry.parampoly3.normalized_range
 
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.lane.access.no_mix_of_deny_or_allow
 
@@ -105,10 +94,8 @@ Total number of addressed rules:   14
 
 	-> Addressed RuleUID: asam.net:xodr:1.8.0:junctions.connection.one_link_to_incoming
 
-Total number of violated rules:    2
+Total number of violated rules:    1
 	-> Violated RuleUID: asam.net:xodr:1.7.0:performance.avoid_redundant_info
-
-	-> Violated RuleUID: asam.net:xodr:1.8.0:junctions.connection.one_link_to_incoming
 
 ====================================================================================================
 

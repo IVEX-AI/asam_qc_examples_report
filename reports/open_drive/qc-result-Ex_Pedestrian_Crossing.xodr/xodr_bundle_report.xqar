@@ -13,23 +13,13 @@
       <AddressedRule ruleUID="asam.net:xodr:1.7.0:junctions.connection.one_connection_element"/>
       <AddressedRule ruleUID="asam.net:xodr:1.8.0:junctions.connection.one_link_to_incoming"/>
       <AddressedRule ruleUID="asam.net:xodr:1.7.0:junctions.connection.start_along_linkage"/>
-      <Issue issueId="0" description=" Lanes that have a width of zero at the beginning of the lane section shall have no predecessor element." level="1" ruleUID="asam.net:xodr:1.7.0:road.lane.link.zero_width_at_start">
-        <Locations description="Lane with width zero and predecessors.">
-          <XMLLocation xpath="/OpenDRIVE/road[1]/lanes/laneSection[2]/left/lane[4]"/>
-        </Locations>
-      </Issue>
-      <Issue issueId="1" description="If a new lane appears besides, only the continuing lane shall be connected to the original lane, not the appearing lane." level="1" ruleUID="asam.net:xodr:1.4.0:road.lane.link.new_lane_appear">
-        <Locations description="Lane with successors with width zero.">
-          <XMLLocation xpath="/OpenDRIVE/road[1]/lanes/laneSection[1]/left/lane[4]"/>
-        </Locations>
-        <Locations description="Successor lane with width zero.">
-          <XMLLocation xpath="/OpenDRIVE/road[1]/lanes/laneSection[2]/left/lane[4]"/>
-        </Locations>
-      </Issue>
+      <AddressedRule ruleUID="asam.net:xodr:1.7.0:junctions.connection.end_opposite_linkage"/>
     </Checker>
     <Checker status="completed" checkerId="geometry_xodr" description="Evaluates elements in the file and their geometrys to guarantee they are in conformity with the standard." summary="">
       <AddressedRule ruleUID="asam.net:xodr:1.7.0:road.geometry.param_poly3.length_match"/>
       <AddressedRule ruleUID="asam.net:xodr:1.4.0:road.lane.border.overlap_with_inner_lanes"/>
+      <AddressedRule ruleUID="asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range"/>
+      <AddressedRule ruleUID="asam.net:xodr:1.7.0:road.geometry.parampoly3.normalized_range"/>
     </Checker>
     <Checker status="completed" checkerId="performance_xodr" description="Evaluates elements in the file to guarantee they are optimized." summary="">
       <AddressedRule ruleUID="asam.net:xodr:1.7.0:performance.avoid_redundant_info"/>

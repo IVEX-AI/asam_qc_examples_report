@@ -37,6 +37,7 @@ QC4OpenX - Pooled results
         - rule:         asam.net:xodr:1.7.0:junctions.connection.one_connection_element
         - rule:         asam.net:xodr:1.8.0:junctions.connection.one_link_to_incoming
         - rule:         asam.net:xodr:1.7.0:junctions.connection.start_along_linkage
+        - rule:         asam.net:xodr:1.7.0:junctions.connection.end_opposite_linkage
 
     Checker:        geometry_xodr
     Description:    Evaluates elements in the file and their geometrys to guarantee they are in conformity with the standard.
@@ -46,6 +47,8 @@ QC4OpenX - Pooled results
         Addressed Rules:        
         - rule:         asam.net:xodr:1.7.0:road.geometry.param_poly3.length_match
         - rule:         asam.net:xodr:1.4.0:road.lane.border.overlap_with_inner_lanes
+        - rule:         asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range
+        - rule:         asam.net:xodr:1.7.0:road.geometry.parampoly3.normalized_range
 
     Checker:        performance_xodr
     Description:    Evaluates elements in the file to guarantee they are optimized.
@@ -75,7 +78,7 @@ QC4OpenX - Pooled results
         Warning:    #10: Redudant lane offset declaration.
                     
                        XPath: /OpenDRIVE/road[11]
-        Warning:    #11: Redudant superelevation declaration.
+        Warning:    #11: Redudant elevation declaration.
                     
                        XPath: /OpenDRIVE/road[13]
         Warning:    #12: Redudant line geometry declaration.
@@ -90,16 +93,16 @@ QC4OpenX - Pooled results
         Warning:    #15: Redudant line geometry declaration.
                     
                        XPath: /OpenDRIVE/road[19]
-        Warning:    #16: Redudant superelevation declaration.
+        Warning:    #16: Redudant elevation declaration.
                     
                        XPath: /OpenDRIVE/road[20]
-        Warning:    #17: Redudant superelevation declaration.
+        Warning:    #17: Redudant elevation declaration.
                     
                        XPath: /OpenDRIVE/road[20]
-        Warning:    #18: Redudant superelevation declaration.
+        Warning:    #18: Redudant elevation declaration.
                     
                        XPath: /OpenDRIVE/road[20]
-        Warning:    #19: Redudant superelevation declaration.
+        Warning:    #19: Redudant elevation declaration.
                     
                        XPath: /OpenDRIVE/road[20]
         Warning:    #20: Redudant line geometry declaration.
@@ -108,13 +111,13 @@ QC4OpenX - Pooled results
         Warning:    #21: Redudant line geometry declaration.
                     
                        XPath: /OpenDRIVE/road[20]
-        Warning:    #22: Redudant superelevation declaration.
+        Warning:    #22: Redudant elevation declaration.
                     
                        XPath: /OpenDRIVE/road[21]
-        Warning:    #23: Redudant superelevation declaration.
+        Warning:    #23: Redudant elevation declaration.
                     
                        XPath: /OpenDRIVE/road[22]
-        Warning:    #24: Redudant superelevation declaration.
+        Warning:    #24: Redudant elevation declaration.
                     
                        XPath: /OpenDRIVE/road[22]
         Warning:    #25: Redudant lane offset declaration.
@@ -134,7 +137,7 @@ QC4OpenX - Pooled results
 Addressed vs Violated rules report 
 
 
-Total number of addressed rules:   14
+Total number of addressed rules:   17
 	-> Addressed RuleUID: asam.net:xodr:1.4.0:junctions.connection.connect_road_no_incoming_road
 
 	-> Addressed RuleUID: asam.net:xodr:1.4.0:road.lane.border.overlap_with_inner_lanes
@@ -145,6 +148,8 @@ Total number of addressed rules:   14
 
 	-> Addressed RuleUID: asam.net:xodr:1.4.0:road.linkage.is_junction_needed
 
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:junctions.connection.end_opposite_linkage
+
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:junctions.connection.one_connection_element
 
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:junctions.connection.start_along_linkage
@@ -152,6 +157,10 @@ Total number of addressed rules:   14
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:performance.avoid_redundant_info
 
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.geometry.param_poly3.length_match
+
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range
+
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.geometry.parampoly3.normalized_range
 
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.lane.access.no_mix_of_deny_or_allow
 

@@ -13,6 +13,7 @@
       <AddressedRule ruleUID="asam.net:xodr:1.7.0:junctions.connection.one_connection_element"/>
       <AddressedRule ruleUID="asam.net:xodr:1.8.0:junctions.connection.one_link_to_incoming"/>
       <AddressedRule ruleUID="asam.net:xodr:1.7.0:junctions.connection.start_along_linkage"/>
+      <AddressedRule ruleUID="asam.net:xodr:1.7.0:junctions.connection.end_opposite_linkage"/>
       <Issue issueId="0" description="Lane levels are not the same in two consecutive lane sections" level="2" ruleUID="asam.net:xodr:1.7.0:road.lane.level_true_one_side">
         <Locations description="">
           <XMLLocation xpath="/OpenDRIVE/road/lanes/laneSection[1]/left/lane[5]"/>
@@ -87,10 +88,12 @@
     <Checker status="completed" checkerId="geometry_xodr" description="Evaluates elements in the file and their geometrys to guarantee they are in conformity with the standard." summary="">
       <AddressedRule ruleUID="asam.net:xodr:1.7.0:road.geometry.param_poly3.length_match"/>
       <AddressedRule ruleUID="asam.net:xodr:1.4.0:road.lane.border.overlap_with_inner_lanes"/>
+      <AddressedRule ruleUID="asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range"/>
+      <AddressedRule ruleUID="asam.net:xodr:1.7.0:road.geometry.parampoly3.normalized_range"/>
     </Checker>
     <Checker status="completed" checkerId="performance_xodr" description="Evaluates elements in the file to guarantee they are optimized." summary="">
       <AddressedRule ruleUID="asam.net:xodr:1.7.0:performance.avoid_redundant_info"/>
-      <Issue issueId="14" description="Redudant superelevation declaration." level="2" ruleUID="asam.net:xodr:1.7.0:performance.avoid_redundant_info">
+      <Issue issueId="14" description="Redudant elevation declaration." level="2" ruleUID="asam.net:xodr:1.7.0:performance.avoid_redundant_info">
         <Locations description="">
           <XMLLocation xpath="/OpenDRIVE/road"/>
         </Locations>

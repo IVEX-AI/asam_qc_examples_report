@@ -15,14 +15,6 @@ QC4OpenX - Pooled results
     Description:    Evaluates elements in the file and their semantics to guarantee they are in conformity with the standard.
     Status:         completed
     Summary:        
-        Error:      #0:  Lanes that have a width of zero at the beginning of the lane section shall have no predecessor element.
-                    Lane with width zero and predecessors.
-                       XPath: /OpenDRIVE/road[1]/lanes/laneSection[2]/left/lane[4]
-        Error:      #1: If a new lane appears besides, only the continuing lane shall be connected to the original lane, not the appearing lane.
-                    Lane with successors with width zero.
-                       XPath: /OpenDRIVE/road[1]/lanes/laneSection[1]/left/lane[4]
-                    Successor lane with width zero.
-                       XPath: /OpenDRIVE/road[1]/lanes/laneSection[2]/left/lane[4]
 
         Addressed Rules:        
         - rule:         asam.net:xodr:1.7.0:road.lane.level_true_one_side
@@ -36,6 +28,7 @@ QC4OpenX - Pooled results
         - rule:         asam.net:xodr:1.7.0:junctions.connection.one_connection_element
         - rule:         asam.net:xodr:1.8.0:junctions.connection.one_link_to_incoming
         - rule:         asam.net:xodr:1.7.0:junctions.connection.start_along_linkage
+        - rule:         asam.net:xodr:1.7.0:junctions.connection.end_opposite_linkage
 
     Checker:        geometry_xodr
     Description:    Evaluates elements in the file and their geometrys to guarantee they are in conformity with the standard.
@@ -45,6 +38,8 @@ QC4OpenX - Pooled results
         Addressed Rules:        
         - rule:         asam.net:xodr:1.7.0:road.geometry.param_poly3.length_match
         - rule:         asam.net:xodr:1.4.0:road.lane.border.overlap_with_inner_lanes
+        - rule:         asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range
+        - rule:         asam.net:xodr:1.7.0:road.geometry.parampoly3.normalized_range
 
     Checker:        performance_xodr
     Description:    Evaluates elements in the file to guarantee they are optimized.
@@ -58,7 +53,7 @@ QC4OpenX - Pooled results
 Addressed vs Violated rules report 
 
 
-Total number of addressed rules:   14
+Total number of addressed rules:   17
 	-> Addressed RuleUID: asam.net:xodr:1.4.0:junctions.connection.connect_road_no_incoming_road
 
 	-> Addressed RuleUID: asam.net:xodr:1.4.0:road.lane.border.overlap_with_inner_lanes
@@ -69,6 +64,8 @@ Total number of addressed rules:   14
 
 	-> Addressed RuleUID: asam.net:xodr:1.4.0:road.linkage.is_junction_needed
 
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:junctions.connection.end_opposite_linkage
+
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:junctions.connection.one_connection_element
 
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:junctions.connection.start_along_linkage
@@ -76,6 +73,10 @@ Total number of addressed rules:   14
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:performance.avoid_redundant_info
 
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.geometry.param_poly3.length_match
+
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.geometry.parampoly3.arclength_range
+
+	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.geometry.parampoly3.normalized_range
 
 	-> Addressed RuleUID: asam.net:xodr:1.7.0:road.lane.access.no_mix_of_deny_or_allow
 
@@ -87,10 +88,6 @@ Total number of addressed rules:   14
 
 	-> Addressed RuleUID: asam.net:xodr:1.8.0:junctions.connection.one_link_to_incoming
 
-Total number of violated rules:    2
-	-> Violated RuleUID: asam.net:xodr:1.4.0:road.lane.link.new_lane_appear
-
-	-> Violated RuleUID: asam.net:xodr:1.7.0:road.lane.link.zero_width_at_start
-
+Total number of violated rules:    0
 ====================================================================================================
 
