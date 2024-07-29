@@ -5,7 +5,7 @@ QC4OpenX - Pooled results
 
 ====================================================================================================
     CheckerBundle:  xoscBundle
-    Build date:     2024-07-11
+    Build date:     2024-07-29
     Build version:  0.1.0
     Description:    OpenScenario checker bundle
     Summary:        
@@ -42,6 +42,8 @@ QC4OpenX - Pooled results
         - rule:         asam.net:xosc:1.2.0:reference_control.valid_actor_reference_in_private_actions
         - rule:         asam.net:xosc:1.2.0:reference_control.resolvable_entity_references
         - rule:         asam.net:xosc:1.2.0:reference_control.resolvable_variable_reference
+        - rule:         asam.net:xosc:1.2.0:reference_control.resolvable_storyboard_element_reference
+        - rule:         asam.net:xosc:1.2.0:reference_control.unique_element_names_on_same_level
 
     Checker:        parameters_xosc
     Description:    Check if parameters properties of input file are properly set
@@ -50,15 +52,31 @@ QC4OpenX - Pooled results
 
         Addressed Rules:        
         - rule:         asam.net:xosc:1.2.0:parameters.valid_parameter_declaration_in_catalogs
+
+    Checker:        data_type_xosc
+    Description:    Check if data_type properties of input file are properly set
+    Status:         completed
+    Summary:        
+
+        Addressed Rules:        
+        - rule:         asam.net:xosc:1.2.0:data_type.allowed_operators
+        - rule:         asam.net:xosc:1.2.0:data_type.non_negative_transition_time_in_light_state_action
+        - rule:         asam.net:xosc:1.2.0:data_type.positive_duration_in_phase
 ====================================================================================================
 
 Addressed vs Violated rules report 
 
 
-Total number of addressed rules:   9
+Total number of addressed rules:   14
 	-> Addressed RuleUID: asam.net:xosc:1.0.0:xml.valid_schema
 
 	-> Addressed RuleUID: asam.net:xosc:1.0.0:xml.valid_xml_document
+
+	-> Addressed RuleUID: asam.net:xosc:1.2.0:data_type.allowed_operators
+
+	-> Addressed RuleUID: asam.net:xosc:1.2.0:data_type.non_negative_transition_time_in_light_state_action
+
+	-> Addressed RuleUID: asam.net:xosc:1.2.0:data_type.positive_duration_in_phase
 
 	-> Addressed RuleUID: asam.net:xosc:1.2.0:parameters.valid_parameter_declaration_in_catalogs
 
@@ -66,9 +84,13 @@ Total number of addressed rules:   9
 
 	-> Addressed RuleUID: asam.net:xosc:1.2.0:reference_control.resolvable_signal_id_in_traffic_signal_state_action
 
+	-> Addressed RuleUID: asam.net:xosc:1.2.0:reference_control.resolvable_storyboard_element_reference
+
 	-> Addressed RuleUID: asam.net:xosc:1.2.0:reference_control.resolvable_traffic_signal_controller_by_traffic_signal_controller_ref
 
 	-> Addressed RuleUID: asam.net:xosc:1.2.0:reference_control.resolvable_variable_reference
+
+	-> Addressed RuleUID: asam.net:xosc:1.2.0:reference_control.unique_element_names_on_same_level
 
 	-> Addressed RuleUID: asam.net:xosc:1.2.0:reference_control.uniquely_resolvable_entity_references
 
