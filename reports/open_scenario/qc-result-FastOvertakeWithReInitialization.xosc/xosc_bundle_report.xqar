@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <CheckerResults version="0.1.0">
-  <CheckerBundle build_date="2024-07-11" description="OpenScenario checker bundle" name="xoscBundle" version="0.1.0" summary="">
+  <CheckerBundle build_date="2024-07-29" description="OpenScenario checker bundle" name="xoscBundle" version="0.1.0" summary="">
     <Checker status="completed" checkerId="basic_xosc" description="Check if basic properties of input file are properly set" summary="">
       <AddressedRule ruleUID="asam.net:xosc:1.0.0:xml.valid_xml_document"/>
     </Checker>
@@ -14,9 +14,16 @@
       <AddressedRule ruleUID="asam.net:xosc:1.2.0:reference_control.valid_actor_reference_in_private_actions"/>
       <AddressedRule ruleUID="asam.net:xosc:1.2.0:reference_control.resolvable_entity_references"/>
       <AddressedRule ruleUID="asam.net:xosc:1.2.0:reference_control.resolvable_variable_reference"/>
+      <AddressedRule ruleUID="asam.net:xosc:1.2.0:reference_control.resolvable_storyboard_element_reference"/>
+      <AddressedRule ruleUID="asam.net:xosc:1.2.0:reference_control.unique_element_names_on_same_level"/>
     </Checker>
     <Checker status="completed" checkerId="parameters_xosc" description="Check if parameters properties of input file are properly set" summary="">
       <AddressedRule ruleUID="asam.net:xosc:1.2.0:parameters.valid_parameter_declaration_in_catalogs"/>
+    </Checker>
+    <Checker status="completed" checkerId="data_type_xosc" description="Check if data_type properties of input file are properly set" summary="">
+      <AddressedRule ruleUID="asam.net:xosc:1.2.0:data_type.allowed_operators"/>
+      <AddressedRule ruleUID="asam.net:xosc:1.2.0:data_type.non_negative_transition_time_in_light_state_action"/>
+      <AddressedRule ruleUID="asam.net:xosc:1.2.0:data_type.positive_duration_in_phase"/>
     </Checker>
   </CheckerBundle>
 </CheckerResults>
